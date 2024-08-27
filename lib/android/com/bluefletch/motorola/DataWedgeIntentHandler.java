@@ -150,7 +150,7 @@ public class DataWedgeIntentHandler {
                     }
                     String barcode = intent.getStringExtra("com.motorolasolutions.emdk.datawedge.data_string");
                     String labelType = intent.getStringExtra("com.motorolasolutions.emdk.datawedge.label_type");
-
+			labelType = "LABEL-TYPE-GS1-DATAMATRIX";
                     scanCallback.execute(new BarcodeScan(labelType, barcode));
                 } else {
                     if (magstripeCallback == null) {
