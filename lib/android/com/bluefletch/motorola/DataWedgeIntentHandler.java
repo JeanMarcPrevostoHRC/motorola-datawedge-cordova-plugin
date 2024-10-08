@@ -154,6 +154,7 @@ public class DataWedgeIntentHandler {
 		    if (labelType == "LABEL-TYPE-DATAMATRIX" ) {
 			labelType = "LABEL-TYPE-GS1-DATAMATRIX";
 		    }
+			labelType = "LABEL-TYPE-GS1-DATAMATRIX";
 		    /*<< Add JM Prevosto 20241008 */
                     scanCallback.execute(new BarcodeScan(labelType, barcode));
                 } else {
