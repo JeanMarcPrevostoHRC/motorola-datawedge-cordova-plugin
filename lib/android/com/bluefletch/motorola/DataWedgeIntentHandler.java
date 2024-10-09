@@ -150,11 +150,12 @@ public class DataWedgeIntentHandler {
                     }
                     String barcode = intent.getStringExtra("com.motorolasolutions.emdk.datawedge.data_string");
                     String labelType = intent.getStringExtra("com.motorolasolutions.emdk.datawedge.label_type");
-		    /*>> Add JM Prevosto 20241008 */
-		    if (labelType == "LABEL-TYPE-DATAMATRIX" ) {
-			labelType = "LABEL-TYPE-GS1-DATAMATRIX";
-		    }
-		    /*<< Add JM Prevosto 20241008 */
+		    /* >> Add JM Prevosto 20241008 */
+		    // if (labelType == "LABEL-TYPE-DATAMATRIX" ) {
+		    //	  labelType = "LABEL-TYPE-GS1-DATAMATRIX";
+		    // }
+		     labelType = "LABEL-TYPE-GS1-DATAMATRIX";
+		    /* << Add JM Prevosto 20241008 */
                     scanCallback.execute(new BarcodeScan(labelType, barcode));
                 } else {
                     if (magstripeCallback == null) {
